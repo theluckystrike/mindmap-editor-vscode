@@ -1,0 +1,27 @@
+Real mind map files used as test fixtures. Each is unchanged, from a public GitHub repository under a permissive license.
+They are test data only and are not part of the packaged extension.
+
+overview.km            https://github.com/jecyu/Web-Performance-Optimization/blob/master/docs/cache/overview.km   MIT, Copyright (c) 2020 Lin Jiyu
+observability.km       https://github.com/kubegems/design/blob/main/observability.km                             Apache-2.0, kubegems authors
+3steps.mm              https://github.com/romilly/fm2md/blob/master/data/3steps.mm                               MIT, Copyright (c) 2014 Romilly Cocking
+CoffeeScad.mm          https://github.com/kaosat-dev/CoffeeSCad/blob/dev/doc/CoffeeScad.mm                       MIT, Copyright (C) 2013 Mark "kaosat-dev" Moissette
+new.mm                 https://github.com/Jinntec/Fore/blob/dev/demo/xmind/new.mm                                MIT, Copyright (c) 2021 Jinntec, Joern Turner
+MVC-MVP-MVVM.mm        https://github.com/quanru/bagu/blob/main/resource/MVC-MVP-MVVM.mm                         MIT, Copyright (c) 2021 quanru
+assessment_mindset.opml https://github.com/dsopas/assessment-mindset/blob/master/assessment_mindset.opml         MIT, Copyright (c) 2018 David Sopas
+note-blocks.opml       https://github.com/mfkrause/carta/blob/main/corpus/text/opml/note-blocks.opml             Apache-2.0, carta authors
+
+The Apache License 2.0 text is at https://www.apache.org/licenses/LICENSE-2.0. The MIT license of the MIT files
+(with the copyright line given above for each):
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation the
+rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit
+persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the
+Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

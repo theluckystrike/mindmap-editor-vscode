@@ -1,0 +1,227 @@
+{
+    "root": {
+        "data": {
+            "id": "zvgjdgyh",
+            "created": 1763164826000,
+            "text": "Website relaunch"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "zvgjdgxw",
+                    "created": 1763164805000,
+                    "text": "Goals",
+                    "priority": 1
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "zvgjdgxt",
+                            "created": 1763164802000,
+                            "text": "Faster pages",
+                            "progress": 9
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "zvgjdgxu",
+                            "created": 1763164803000,
+                            "text": "Clearer pricing",
+                            "progress": 5
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "zvgjdgxv",
+                            "created": 1763164804000,
+                            "text": "More sign-ups",
+                            "note": "Target: +20 % in 3 months.\nMeasure with the weekly report."
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "zvgjdgy5",
+                    "created": 1763164814000,
+                    "text": "Content",
+                    "priority": 2
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "zvgjdgxx",
+                            "created": 1763164806000,
+                            "text": "Home page copy",
+                            "progress": 7
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "zvgjdgy0",
+                            "created": 1763164809000,
+                            "text": "Product pages",
+                            "progress": 3
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "zvgjdgxy",
+                                    "created": 1763164807000,
+                                    "text": "Screenshots"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "zvgjdgxz",
+                                    "created": 1763164808000,
+                                    "text": "Short videos"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "zvgjdgy4",
+                            "created": 1763164813000,
+                            "text": "Blog",
+                            "expandState": "collapse"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "zvgjdgy1",
+                                    "created": 1763164810000,
+                                    "text": "Launch post"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "zvgjdgy2",
+                                    "created": 1763164811000,
+                                    "text": "Case study"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "zvgjdgy3",
+                                    "created": 1763164812000,
+                                    "text": "FAQ update"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "zvgjdgy9",
+                    "created": 1763164818000,
+                    "text": "Design"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "zvgjdgy6",
+                            "created": 1763164815000,
+                            "text": "Style guide",
+                            "hyperlink": "https://example.com/style-guide",
+                            "hyperlinkTitle": "Style guide"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "zvgjdgy7",
+                            "created": 1763164816000,
+                            "text": "Dark mode",
+                            "progress": 1
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "zvgjdgy8",
+                            "created": 1763164817000,
+                            "text": "Icons"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "zvgjdgyd",
+                    "created": 1763164822000,
+                    "text": "Launch",
+                    "priority": 3
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "zvgjdgya",
+                            "created": 1763164819000,
+                            "text": "Checklist",
+                            "note": "Redirects, sitemap, analytics, backups."
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "zvgjdgyb",
+                            "created": 1763164820000,
+                            "text": "Announcement"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "zvgjdgyc",
+                            "created": 1763164821000,
+                            "text": "Go live: 1 March"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "zvgjdgyg",
+                    "created": 1763164825000,
+                    "text": "Risks"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "zvgjdgye",
+                            "created": 1763164823000,
+                            "text": "Content late",
+                            "priority": 2
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "zvgjdgyf",
+                            "created": 1763164824000,
+                            "text": "Old links break"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "default",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}

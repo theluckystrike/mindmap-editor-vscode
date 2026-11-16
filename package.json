@@ -1,0 +1,336 @@
+{
+  "name": "zovo-mindmap-editor",
+  "displayName": "Mindmap Editor: KM, MM & OPML",
+  "description": "Mindmap editor for VS Code: open .km (KityMinder), FreeMind .mm and OPML files as a mind map and edit it with the keyboard and drag and drop. Notes, priority, progress, links, collapse. Saves back to the same format, no account, no network.",
+  "version": "0.1.0",
+  "publisher": "zovo",
+  "license": "MIT",
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#1B2430",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theluckystrike/mindmap-editor-vscode"
+  },
+  "bugs": {
+    "url": "https://github.com/theluckystrike/mindmap-editor-vscode/issues"
+  },
+  "homepage": "https://github.com/theluckystrike/mindmap-editor-vscode#readme",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "mindmap",
+    "mind map",
+    "brainstorming",
+    "outline",
+    "notes"
+  ],
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onCustomEditor:zovoMindmap.editor",
+    "onCustomEditor:zovoMindmap.editorOption",
+    "onCommand:zovoMindmap.openWith",
+    "onCommand:zovoMindmap.newMap",
+    "onCommand:zovoMindmap.openSample",
+    "onCommand:zovoMindmap.exportPicture",
+    "onCommand:zovoMindmap.convert",
+    "onCommand:zovoMindmap.taskView",
+    "onUri"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    },
+    "virtualWorkspaces": {
+      "supported": "limited",
+      "description": "The Pro tools write files next to the map and need files on disk."
+    }
+  },
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "zovoMindmap.editor",
+        "displayName": "Mindmap Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.km"
+          }
+        ],
+        "priority": "default"
+      },
+      {
+        "viewType": "zovoMindmap.editorOption",
+        "displayName": "Mindmap Editor",
+        "selector": [
+          {
+            "filenamePattern": "*.mm"
+          },
+          {
+            "filenamePattern": "*.opml"
+          }
+        ],
+        "priority": "option"
+      }
+    ],
+    "commands": [
+      {
+        "command": "zovoMindmap.openWith",
+        "title": "Open in Mindmap Editor",
+        "category": "Mindmap",
+        "icon": "$(type-hierarchy)"
+      },
+      {
+        "command": "zovoMindmap.openAsText",
+        "title": "Open the Mind Map as Text",
+        "category": "Mindmap",
+        "icon": "$(go-to-file)"
+      },
+      {
+        "command": "zovoMindmap.newMap",
+        "title": "New Mind Map",
+        "category": "Mindmap"
+      },
+      {
+        "command": "zovoMindmap.openSample",
+        "title": "Open the Sample Mind Map",
+        "category": "Mindmap"
+      },
+      {
+        "command": "zovoMindmap.openWalkthrough",
+        "title": "Get Started",
+        "category": "Mindmap"
+      },
+      {
+        "command": "zovoMindmap.moreViewers",
+        "title": "More free tools by Zovo",
+        "category": "Mindmap"
+      },
+      {
+        "command": "zovoMindmap.supportDeveloper",
+        "title": "Support the developer",
+        "category": "Mindmap"
+      },
+      {
+        "command": "zovoMindmap.exportPicture",
+        "title": "Export Picture: PNG, SVG or PDF (Pro)",
+        "category": "Mindmap",
+        "icon": "$(export)"
+      },
+      {
+        "command": "zovoMindmap.convert",
+        "title": "Convert Mind Maps: KM, MM, OPML, Markdown (Pro)",
+        "category": "Mindmap"
+      },
+      {
+        "command": "zovoMindmap.taskView",
+        "title": "Task View of the Map (Pro)",
+        "category": "Mindmap"
+      },
+      {
+        "command": "zovoMindmap.zovoPro.export",
+        "title": "Zovo Pro: Export mind map picture"
+      },
+      {
+        "command": "zovoMindmap.zovoPro.convert",
+        "title": "Zovo Pro: Convert mind maps"
+      },
+      {
+        "command": "zovoMindmap.zovoPro.tasks",
+        "title": "Zovo Pro: Task view of a mind map"
+      },
+      {
+        "command": "zovoMindmap.getPro",
+        "title": "Get Zovo Pro (USD 19 once, all Zovo extensions)",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "zovoMindmap.payWithPayPal",
+        "title": "Pay for Zovo Pro with PayPal (USD 19, team of 5 USD 59)",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "zovoMindmap.unlockWithSponsors",
+        "title": "I already paid: unlock with GitHub Sponsors",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "zovoMindmap.enterLicenseKey",
+        "title": "Enter Zovo Pro license key",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "zovoMindmap.removeLicense",
+        "title": "Remove Zovo Pro from this editor",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "zovoMindmap.payByCard",
+        "title": "Pay for Zovo Pro by card (USD 19)",
+        "category": "Zovo Pro"
+      },
+      {
+        "command": "zovoMindmap.enterKey",
+        "title": "Enter a key",
+        "category": "Zovo Pro"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "zovoMindmap.openWith",
+          "when": "resourceExtname =~ /^\\.(km|mm|opml)$/i && !(activeCustomEditorId == 'zovoMindmap.editor' || activeCustomEditorId == 'zovoMindmap.editorOption') && !notebookEditorFocused",
+          "group": "navigation"
+        },
+        {
+          "command": "zovoMindmap.openAsText",
+          "when": "activeCustomEditorId == 'zovoMindmap.editor' || activeCustomEditorId == 'zovoMindmap.editorOption'",
+          "group": "navigation"
+        },
+        {
+          "command": "zovoMindmap.exportPicture",
+          "when": "(activeCustomEditorId == 'zovoMindmap.editor' || activeCustomEditorId == 'zovoMindmap.editorOption') && config.zovoMindmap.showProTools",
+          "group": "1_mindmap@1"
+        },
+        {
+          "command": "zovoMindmap.convert",
+          "when": "(activeCustomEditorId == 'zovoMindmap.editor' || activeCustomEditorId == 'zovoMindmap.editorOption') && config.zovoMindmap.showProTools",
+          "group": "1_mindmap@2"
+        },
+        {
+          "command": "zovoMindmap.taskView",
+          "when": "(activeCustomEditorId == 'zovoMindmap.editor' || activeCustomEditorId == 'zovoMindmap.editorOption') && config.zovoMindmap.showProTools",
+          "group": "1_mindmap@3"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "zovoMindmap.openWith",
+          "when": "resourceExtname =~ /^\\.(km|mm|opml)$/i && !explorerResourceIsFolder",
+          "group": "navigation@9"
+        },
+        {
+          "command": "zovoMindmap.zovoPro.export",
+          "when": "resourceExtname =~ /^\\.(km|mm|opml)$/i && !explorerResourceIsFolder && config.zovoMindmap.showProTools",
+          "group": "zovoPro@1"
+        },
+        {
+          "command": "zovoMindmap.zovoPro.convert",
+          "when": "(resourceExtname =~ /^\\.(km|mm|opml)$/i || resourceExtname =~ /^\\.(md|markdown)$/i) && !explorerResourceIsFolder && config.zovoMindmap.showProTools",
+          "group": "zovoPro@2"
+        },
+        {
+          "command": "zovoMindmap.zovoPro.tasks",
+          "when": "resourceExtname =~ /^\\.(km|mm|opml)$/i && !explorerResourceIsFolder && config.zovoMindmap.showProTools",
+          "group": "zovoPro@3"
+        },
+        {
+          "command": "zovoMindmap.zovoPro.convert",
+          "when": "explorerResourceIsFolder && config.zovoMindmap.showProTools",
+          "group": "zovoPro@2"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "zovoMindmap.openAsText",
+          "when": "activeCustomEditorId == 'zovoMindmap.editor' || activeCustomEditorId == 'zovoMindmap.editorOption'"
+        },
+        {
+          "command": "zovoMindmap.exportPicture",
+          "when": "config.zovoMindmap.showProTools"
+        },
+        {
+          "command": "zovoMindmap.convert",
+          "when": "config.zovoMindmap.showProTools"
+        },
+        {
+          "command": "zovoMindmap.taskView",
+          "when": "config.zovoMindmap.showProTools"
+        },
+        {
+          "command": "zovoMindmap.zovoPro.export",
+          "when": "false"
+        },
+        {
+          "command": "zovoMindmap.zovoPro.convert",
+          "when": "false"
+        },
+        {
+          "command": "zovoMindmap.zovoPro.tasks",
+          "when": "false"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Mindmap Editor",
+      "properties": {
+        "zovoMindmap.showProTools": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the Zovo Pro tools (export picture, convert, task view) in the map toolbar, the Command Palette, the Explorer menu and the editor title menu. Everything free stays visible."
+        },
+        "zovoMindmap.askForRating": {
+          "type": "boolean",
+          "default": true,
+          "description": "Ask once for a Marketplace rating after maps opened without an error on two occasions at least 30 minutes apart. \"Later\" asks one more time after 7 days, \"No thanks\" never asks again. Nothing is sent anywhere."
+        },
+        "zovoMindmap.showSupportLinks": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show the small Rate, More free tools and Zovo Pro links at the bottom of the map. Nothing is sent anywhere."
+        }
+      }
+    },
+    "walkthroughs": [
+      {
+        "id": "zovoMindmap.start",
+        "title": "Get started with Mindmap Editor",
+        "description": "Open a mind map, edit it with the keyboard and save it back to the same file.",
+        "steps": [
+          {
+            "id": "open",
+            "title": "Open a mind map",
+            "description": "A .km file opens as a map when you click it. For FreeMind .mm and OPML files, right-click the file and pick Open in Mindmap Editor.\n[Open the sample map](command:zovoMindmap.openSample)\n[New mind map](command:zovoMindmap.newMap)",
+            "media": {
+              "image": "images/screenshot.png",
+              "altText": "A mind map open in Mindmap Editor in VS Code, with the details panel on the right."
+            },
+            "completionEvents": [
+              "onCommand:zovoMindmap.openSample"
+            ]
+          },
+          {
+            "id": "keys",
+            "title": "Edit with the keyboard",
+            "description": "Tab adds a child topic, Enter a sibling, F2 renames, Delete removes a branch, Space collapses it. Drag a topic onto another to move it. Ctrl+Z or Cmd+Z undoes, Ctrl+S or Cmd+S saves.",
+            "media": {
+              "markdown": "walkthrough/keys.md"
+            }
+          },
+          {
+            "id": "zovo-related",
+            "title": "Tools that often go with mind maps",
+            "description": "If you also open XMind files or draw diagrams in Markdown, these free Zovo extensions help. A link opens the extension page, and you choose there whether to install it.\n[XMind Viewer & Mind Map Viewer](command:extension.open?%5B%22zovo.xmind-mind-map-viewer%22%5D)\n[Markdown Editor](command:extension.open?%5B%22zovo.zovo-markdown-editor%22%5D)\n[Mermaid Viewer](command:extension.open?%5B%22zovo.mermaid-viewer%22%5D)",
+            "media": {
+              "markdown": "walkthrough/related.md"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node scripts/test.js",
+    "package": "npx -y @vscode/vsce@3 package --no-dependencies"
+  },
+  "devDependencies": {},
+  "sponsor": {
+    "url": "https://github.com/sponsors/theluckystrike/sponsorships?tier_id=679878"
+  }
+}
